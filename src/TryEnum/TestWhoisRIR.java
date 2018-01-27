@@ -1,6 +1,6 @@
 package TryEnum;
 
-public class Test {
+public class TestWhoisRIR {
 
     public static void main(String[] args) {
 
