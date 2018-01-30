@@ -98,6 +98,23 @@ public class CreditCard {
 		walletP[1].charge(10020);
 		walletP[2].charge(20121);
 		
+		System.out.println("//-------------------------------------------------------------------------");
+		
+		for (int val = 1; val <= 16; val++) {
+			walletP[0].charge(3*val);
+			walletP[1].charge(2*val);
+			walletP[2].charge(val);
+		}
+		
+		for (CreditCard card1 : walletP) {
+			CreditCard.printSummary(card1);
+			while(card1.getBalance() > 200.0)
+			{
+				card1.makePayment(200);
+				System.out.println("New Balance = " + card1.getBalance());
+			}
+		}
+		
 	}
 
 }
